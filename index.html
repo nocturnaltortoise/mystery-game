@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Queer Case of Amelia Marsh</title>
+     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <button type="button" name="button" id="back-btn" class="hidden action-btn">Back</button>
+        <div id="scene-2-btns" class="hidden">
+          <button type="button" name="button" class="action-btn scene-btn" data-scene-id="initial-letter">Amelia's Letter</button>
+        </div>
+      </div>
+      <div class="content">
+        <div id="scene-1" class="text-content">
+          <h1>The Queer Case of Amelia Marsh</h1>
+          <p>Who, are you?</p>
+          <input type="text" id="character-name"></input>
+          <br><br>
+          <button id="set-character-name-btn" class="m-b-md">Begin the story</button>
+        </div>
+        <div id="scene-2" class="text-content hidden show-next-btn" data-custom-btns="scene-2-btns">
+          <p>You bend down to pick up the post and find amongst it a letter, your name and address scrawled in handwriting you don’t recognise. Taking it to the kitchen table you eagerly slit the envelope open. Could this be the case you’ve been waiting for? Or is it just another letter from Jim at the neighbourhood watch about the height of hedges?</p>
+          <p>The letter itself is on thick beige paper, addressed from an Amelia Marsh, in rural Yorkshire, not far from your home town of Sheffield.</p>
+          <p>It reads:</p>
+          <p><em><blockquote>Dear <span class="character-name"></span>,</p>
+          <p>I hope this letter finds you in good health.</p>
+          <p>If you have received this letter then I am dead, and it has been posted to you by my trusted maidservant and housekeeper, as instructed. I instructed her to post this to you if she believed that there was any possibility of foul play. That, unfortunately, means that it is likely that I was murdered. You may not remember me, but I watched you grow up as a friend of your mother, and I have since followed your career as a detective on occasion. I know that if anyone can work out the circumstances of my death it is you. I know that you do not work for free, but I was not without wealth in life, so provision has been made in the will for your payment. If I was indeed murdered, I hope you can bring the killer to justice. I’m sure the police will appreciate your assistance.</p>
+          <p>Yours, even in death,</p>
+          <p>A. Marsh</blockquote></em></p>
+          <p>Memories of your childhood come flooding back, and you can remember Miss Marsh, when you were growing up. You remember your mother talking about Miss Marsh in less favourable terms at dinner times, when she wasn’t around of course, always talking about this trouble or other that she had got herself into. Your mother never thought much of Miss Marsh’s friends, “a bunch of queer types, artists and layabouts – you steer clear of that lot” she would say. Getting up from the kitchen table, you walk upstairs to your office, and sift through the other cases on your desk. Mr Brown’s missing cat can wait, and that case about the blackmail of some prince of Bohemia or other didn’t sound that interesting anyway...</p>
+        </div>
+
+        <div id="scene-initial-letter" class="text-content hidden" data-custom-btns="scene-initial-letter-btns">
+          <p><em><blockquote>Dear <span class="character-name"></span>,</p>
+          <p>I hope this letter finds you in good health.</p>
+          <p>If you have received this letter then I am dead, and it has been posted to you by my trusted maidservant and housekeeper, as instructed. I instructed her to post this to you if she believed that there was any possibility of foul play. That, unfortunately, means that it is likely that I was murdered. You may not remember me, but I watched you grow up as a friend of your mother, and I have since followed your career as a detective on occasion. I know that if anyone can work out the circumstances of my death it is you. I know that you do not work for free, but I was not without wealth in life, so provision has been made in the will for your payment. If I was indeed murdered, I hope you can bring the killer to justice. I’m sure the police will appreciate your assistance.</p>
+          <p>Yours, even in death,</p>
+          <p>A. Marsh</blockquote></em></p>
+        </div>
+
+        <div id="scene-3" class="text-content hidden show-next-btn">
+          <p>You arrive at the house early in the morning. It is an impressive looking house from the road, with a long drive passing between two ornate gateposts adorned with limestone lion statues. As you drive up to the house, you can’t help but notice the number of police cars and officers parked on the gravel in front of the house, past the immaculately kept lawns. You pull to a stop and get out of the car, and a duo of suited, bowler hatted almost identical individuals approach you.</p>
+          <p>“Ah, you must be the detective, <span class="character-name"></span>”, says the first.</p>
+          <p>“We are the police detectives in charge here. I am Inspector Paj, and this is my twin brother, and my second in command” Says the second, in almost the same tone of voice, twirling the curled ends of his well kept moustache.</p>
+          <p>“You should have a letter from the deceased if I’m not mistaken” says the first Paj.</p>
+          <p>You hand over the letter, and they both read it intently for a few moments, before handing it back.</p>
+          <p>“Well that all seems satisfactory, although I believe you may be disappointed. It is our opinion that Miss Marsh committed suicide, you see. Let us show you the scene. We have the house on lockdown, so that none of Miss Marsh’s friends can leave before we have crossed our ts and dotted our is, so to speak.” When Paj says “friends”, he makes air quotes with his hands, and the other Paj scoffs a little.</p>
+          <p>“Anyway, follow us”</p>
+        </div>
+
+
+        <!-- <div id="content-3" class="text-content hidden" data-custom-btns="content-3-btns">
+          <p>test</p>
+        </div>
+        <div id="scene-1" class="text-content hidden" data-custom-btns="scene-1-btns">
+          <p>Specific scene test</p>
+        </div>
+        <div id="scene-2" class="text-content hidden">
+          <p>Specific scene test 2</p>
+        </div> -->
+        <div class="actions-footer">
+          <button id="next-btn" type="button" name="button" class="action-btn hidden" data-scene-id="2">Next > </button>
+          <!-- <div id="content-3-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="1">Test </button>
+          </div> -->
+          <div id="scene-initial-letter-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn back-btn" data-scene-id="2">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>
