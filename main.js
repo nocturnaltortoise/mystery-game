@@ -43,6 +43,7 @@ $(document).ready(function(){
     hideEverything();
 
     var $that = $(this);
+    $that.addClass('visited');
     // $('.back-btn').data('sceneId', $that.data('sceneId'));
     loadContent('#scene-' + $that.data('sceneId'));
     // $('#back-btn').data('back-ref', '#scene-' + $that.data('sceneId'));
