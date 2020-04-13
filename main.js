@@ -36,7 +36,6 @@ $(document).ready(function(){
     $('.back-btn').data('sceneId', nextContentID);
     loadContent('#scene-' + nextContentID);
     $nextBtn.data('sceneId', nextContentID);
-    // $('#back-btn').data('back-ref', '#content-' + currentContentID);
   });
 
   $('body').on('click', '.scene-btn', function(){
@@ -44,16 +43,12 @@ $(document).ready(function(){
 
     var $that = $(this);
     $that.addClass('visited');
-    // $('.back-btn').data('sceneId', $that.data('sceneId'));
-    loadContent('#scene-' + $that.data('sceneId'));
-    // $('#back-btn').data('back-ref', '#scene-' + $that.data('sceneId'));
-  })
+    if (!$that.hasClass('sidebar-btn')) {
+      $('.back-btn').data('sceneId', $that.data('sceneId'));
+    }
 
-  // $('body').on('click', '#back-btn', function(){
-  //   console.log($(this).data('backRef'));
-  //   hideEverything();
-  //   loadContent($(this).data('backRef'));
-  // })
+    loadContent('#scene-' + $that.data('sceneId'));
+  })
 
   $('body').on('click', '#set-character-name-btn', function(){
     var characterName = $('#character-name').val();
@@ -63,8 +58,6 @@ $(document).ready(function(){
     $('#next-btn').show();
     $('#next-btn').data('sceneId', "2");
     $('#scene-2-btns').show();
-    // $('#back-btn').show();
-    // $('#back-btn').data('backRef', '#content-1');
   });
 
 })
