@@ -9,7 +9,7 @@
   margin: 10px auto;
   width: 80%;
   display: flex;
-  border: #fff dashed 1px;
+  border: #fff solid 2px;
 }
 
 .sidebar {
