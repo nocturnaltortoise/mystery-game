@@ -26,6 +26,8 @@ function loadContent(id){
 }
 
 $(document).ready(function(){
+  var hasIrishBook = false;
+
   $('body').on('click', '#next-btn', function(){
     var $nextBtn = $('#next-btn');
     var currentContentID = $nextBtn.data('sceneId');
@@ -59,6 +61,10 @@ $(document).ready(function(){
     $('#next-btn').data('sceneId', "2");
     $('#scene-2-btns').show();
   });
+
+  $('body').on('click', '.scene-btn[data-scene-id="library-irish-book"]', function(){
+    hasIrishBook = true;
+  })
 
 })
 

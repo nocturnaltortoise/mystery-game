@@ -13,6 +13,9 @@
         <div id="scene-2-btns" class="hidden">
           <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="initial-letter">Amelia's Letter</button>
         </div>
+        <div id="scene-rejoin-detectives-btns" class="hidden">
+          <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="map">House Map</button>
+        </div>
       </div>
       <div class="content">
         <div id="scene-1" class="text-content">
@@ -55,7 +58,7 @@
 
         <div id="scene-4" class="text-content hidden" data-custom-btns="scene-murder-scene-btns">
           <p>The two detectives lead you around the back of the house, down the slopes, past the greenhouse, to a small sunken bit of ground, barely visible from the house.</p>
-          <p>“This is where the body was found” Smith says.</p>
+          <p>“This is where the body was found, she was killed on the 5th August, two days ago.” Smith says.</p>
           <p>“And here are some photos of the scene. As you can see, the body of the victim has mysteriously disappeared!</p>
           <p>“Just a jest, we removed the body, do you think we’d just keep everything frozen in time for days while we waited for you to get here?</p>
           <p>Easton puts a hand into his jacket, and removes a small manila folder, and passes it to you</p>
@@ -84,14 +87,14 @@
         <div id="scene-greenhouse" class="text-content hidden" data-custom-btns="scene-murder-scene-greenhouse-btns">
           <p>As you enter the greenhouse you are awestruck by its beauty. It is a sizeable space, stretching back at least ten metres and five metres wide. Light filters down through the glass roof, dappling the floor in droplets of golden sunshine as it drips through the exotic leaves of the plants in the central raised beds. The walls are lined by beds of plants and trays of plant pots, on wooden pallets and supports. There is another door to the greenhouse, on the left hand side in the middle, towards the house. The path round the central bed is partly blocked by some split soil bags. </p>
         </div>
-        <div id="scene-greenhouse-spilled-soil" class="text-content hidden" data-custom-btns="scene-greenhouse-2-btns">
+        <div id="scene-greenhouse-spilled-soil" class="text-content hidden" data-custom-btns="scene-murder-scene-greenhouse-btns">
           <p>Pushing aside the soil bags, you notice blood stains on the slabs under the bags – someone has used the soil to conceal the stains!</p>
         </div>
-        <div id="scene-greenhouse-doors" class="text-content hidden" data-custom-btns="scene-greenhouse-2-btns">
+        <div id="scene-greenhouse-doors" class="text-content hidden" data-custom-btns="scene-murder-scene-greenhouse-btns">
           <p>The doors nearest the house are unlocked, with a simple wooden frame and glass panes.</p>
           <p>The doors you entered through are similar, but at the bottom of one of the frames, a small thread of light blue fabric is caught on a wooden splinter. Could this be a piece of Amelia’s nightgown? Why would it be here?</p>
         </div>
-        <div id="scene-greenhouse-plants" class="text-content hidden" data-custom-btns="scene-greenhouse-2-btns">
+        <div id="scene-greenhouse-plants" class="text-content hidden" data-custom-btns="scene-murder-scene-greenhouse-btns">
           <p>The plant beds contain a variety of exotic and mundane plants, but, barring a few gardening tools, nothing seems untoward.</p>
         </div>
 
@@ -99,7 +102,7 @@
           <p>As you enter the greenhouse you are awestruck by its beauty. It is a sizeable space, stretching back at least ten metres and five metres wide. Light filters down through the glass roof, dappling the floor in droplets of golden sunshine as it drips through the exotic leaves of the plants in the central raised beds. The walls are lined by beds of plants and trays of plant pots, on wooden pallets and supports. There is another door to the greenhouse, on the left hand side in the middle, towards the house. The path round the central bed is partly blocked by some split soil bags. </p>
         </div>
 
-        <div id="scene-rejoin-detectives" class="text-content hidden">
+        <div id="scene-rejoin-detectives" class="text-content hidden" data-custom-btns="scene-rejoin-detectives-btns">
           <p>As you round the house, you spot Smith and Easton leaning on the columns of the porch, smoking cigarettes. As you appear, Smith exclaims, </p>
           <p>“Ah, there’s our budding Sherlock Holmes, cracked it yet?”</p>
           <p>“I thought not.” He interrupts, before you have time to respond.</p>
@@ -118,6 +121,104 @@
           <p>Smith and Easton shift nervously. Smith coughs, and then gestures at the final person in the room, herself trying to blend into the furniture. She wears a simple black uniform dress and has her dark brown hair tied back. She has brown eyes and a face wrinkled with years of experience.</p>
           <p>“Finally, this is Miss Edith Crosby, Miss Marsh’s housekeeper and maidservant.”</p>
           <p>Miss Crosby curtsies, and says nothing. </p>
+        </div>
+
+        <div id="scene-map" class="text-content hidden" style="text-align: center;" data-custom-btns="scene-map-btns">
+          <img style="margin: 20px;" src="MysteryGameMap.svg.png" alt="A map of the house">
+        </div>
+
+        <div id="scene-library" class="text-content hidden" data-custom-btns="scene-library-btns">
+          <p>The library’s walls are coated in books, arranged in dark wood shelves, encased in towering bookcases. The back wall is mostly the glass doors opening on to the garden, and the front third closest to the door is similarly dominated by windows. Between the bookshelves are several ornate oak tables, with matching chairs, as well as an assortment of comfier, green upholstered chairs. Books are littered throughout the room, this room was clearly well used. </p>
+        </div>
+
+        <div id="scene-library-categories" class="text-content hidden" data-custom-btns="scene-library-categories-btns">
+          <p>The library is organised into categories:</p>
+        </div>
+
+        <div id="scene-biographies" class="text-content hidden" data-custom-btns="scene-library-no-books-btns">
+          <p>This section is full of a variety of biographies, including: </p>
+          <ul>
+            <li>Goodbye Jojo: A Biography of Jonathan Joestar, by B. Slinger, published by The Speedwagon Foundation</li>
+          </ul>
+        </div>
+        <div id="scene-history" class="text-content hidden" data-custom-btns="scene-library-no-books-btns">
+          <p>This section is full of a variety of books on world history, including: </p>
+          <ul>
+            <li>How To Fight The British Without Fleeing West: A Guide by A. Burr</li>
+            <li>The English Aren’t Really That Great: A Perspective On Irish History, by Michael Collins</li>
+          </ul>
+        </div>
+        <div id="scene-geography" class="text-content hidden" data-custom-btns="scene-library-no-books-btns">
+          <p>This section is full of a variety of books on world geography, including: </p>
+          <ul>
+            <li>Palestine, just where is it? A Guide to the Middle East, by Mark Sykes</li>
+          </ul>
+        </div>
+        <div id="scene-science" class="text-content hidden" data-custom-btns="scene-library-no-books-btns">
+          <p>This section is full of a variety of books on science, including: </p>
+          <ul>
+            <li>101 Uses for Hydrogen Fluoride by R. Munroe</li>
+          </ul>
+        </div>
+        <div id="scene-fiction" class="text-content hidden" data-custom-btns="scene-library-no-books-btns">
+          <p>This section is full of a variety of novels, including: </p>
+          <ul>
+            <li>Silence In The Library by S. Moffat</li>
+            <li>The Unicorn And The Wasp by A. Christie</li>
+            <li>Hound of the Baskervilles by Arthur Conan Doyle</li>
+          </ul>
+        </div>
+        <div id="scene-instructional" class="text-content hidden" data-custom-btns="scene-instructional-books-btns">
+          <p>This section is full of a variety of instructional books, including: </p>
+          <ul>
+            <li>How To Write Like You’re Running Out Of Time by A. Hamilton</li>
+            <li>Learn Irish in 30 Minutes!</li>
+            <li>Monoalphabetic Ciphers And Their Usage by Friedrich Kasiski</li>
+            <li>Deutsche Sprache, schwere Sprache: A Guide to German, by E. Ludendorff</li>
+          </ul>
+        </div>
+        <div id="scene-library-cipher-book" class="text-content hidden">
+          <p>This appears to be a book on ciphers:</p>
+          <blockquote>
+            <em>A monoalphabetic cipher is one in which the regular alphabet is replaced with a cipherbet, that is, every letter is replaced with another letter. For instance, a Caesar shift cipher, which involves taking each letter of the plaintext and changing it for the letter n places right in the alphabet, where n is a number picked by the person using the cipher.</em>
+          </blockquote>
+          <p>In the margins, there are three right arrows scribbled next to each other.</p>
+        </div>
+        <div id="scene-library-irish-book" class="text-content hidden">
+          <p>This appears to be a book on the Irish language for beginners.</p>
+        </div>
+
+        <div id="scene-boyds-room" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
+          <p>This is the room of a man who does not care for tidiness, but certainly cares for his work. The bed is unmade, his clothes are scattered all over the room, and the curtains are half open, scattering rays of light across the desk. The desk is full of plates, mugs, scattered papers, and opened books. </p>
+        </div>
+        <div id="scene-boyds-papers" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
+          <p>The first thing that draws your eye is a rather official looking report, it's written in some kind of code.</p>
+          <blockquote>
+            <p>Uhsruw iru N dw PL5, 07/08/1920</p>
+            <p>Xujhqw: Ilwcjhudog kdv pryhg. Pduvk kdv ehhq nloohg. Srvlwlrq lv frpsurplvhg. Pduvk pdb kdyh glvfryhuhg ghwdlov ri Ihqldq sorw. Vwroh pb uhyroyhu wr gr lw. Pb plvwdnh, glg qrw hashfw Ilwcjhudog wr pryh iru vrph wlph, kdg ehhq zrunlqj rq wkh ylfdu, Vdpvrq. </p>
+          </blockquote>
+          <p>On another scrap of paper:</p>
+          <blockquote>
+            <p>Wkh frgh iru Vdpvrq’v orfnera: Gholodk</p>
+          </blockquote>
+          <p>And another:</p>
+          <blockquote>
+            <p>L krsh brx irujlyh ph zkhq brx glvfryhu zkdw L dp, Hgzdug. L gr oryh brx, hyhq li L lqwhqghg iluvw wr xvh brx. Brx glg qrw oljkw ph, L zdv d pdg frphw ehiruh L phw brx, exw brx ilahg ph lq brxu ruelw.</p>
+          </blockquote>
+        </div>
+        <div id="scene-boyds-books" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
+          <p>Boyd has several books on his desk:</p>
+          <ul>
+            <li>A History of Ireland</li>
+            <li>A copy of the Bible, opened to Leviticus 20</li>
+            <li>The Thirty Nine Steps by John Buchan</li>
+          </ul>
+        </div>
+        <div id="scene-boyds-desk" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
+          <p>Along with a swiss army knife, you find a cyanide pill, and a small cardboard box mostly full of 9mm bullets, stamped with “Standard Issue: British Army”</p>
+        </div>
+        <div id="scene-boyds-clothes" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
+          <p>Amongst the clothes, you find a leather holster for a revolver.</p>
         </div>
 
         <div class="actions-footer">
@@ -156,9 +257,38 @@
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="rejoin-detectives">Rejoin the detectives</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="4">Back to the garden</button>
           </div>
-          <div id="scene-greenhouse-2-btns" class="hidden">
-            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="rejoin-detectives">Rejoin the detectives</button>
-            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="greenhouse">Continue examining the greenhouse</button>
+          <div id="scene-map-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="greenhouse">Greenhouse</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library">Library</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-room">Boyd's Room</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-room">Samson's Room</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="fitzgeralds-room">Fitzgerald's Room</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="crosbys-room">Crosby's Room</button>
+          </div>
+          <div id="scene-library-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-categories">Search the library</button>
+          </div>
+          <div id="scene-library-no-books-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-categories">Back</button>
+          </div>
+          <div id="scene-instructional-books-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-categories">Back</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-cipher-book">Take <em>Monoalphabetic Ciphers And Their Usage</em></button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-irish-book">Take <em>Learn Irish in 30 Minutes!</em></button>
+          </div>
+          <div id="scene-library-categories-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="biographies">Biographies</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="history">History</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="geography">Geography</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="science">Science</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="fiction">Fiction</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="instructional">Instructional</button>
+          </div>
+          <div id="scene-boyds-room-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-papers">Examine the papers</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-books">Examine the books</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-desk">Search the desk drawers</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-clothes">Search the clothes</button>
           </div>
         </div>
       </div>

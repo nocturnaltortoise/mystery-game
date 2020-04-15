@@ -18,6 +18,10 @@
   padding: 20px;
 }
 
+.sidebar-btn {
+  margin-bottom: 10px;
+}
+
 .content {
   width: 80%;
   padding: 10px 40px;
