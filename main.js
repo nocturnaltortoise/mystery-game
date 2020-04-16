@@ -29,6 +29,8 @@ $(document).ready(function(){
   var hasIrishBook = false;
   var hasSamsonsKey = false;
   var hasSamsonsLockbox = false;
+  var retryLockbox = false;
+  var enteredKeycode = "";
 
   $('#next-btn').on('click', function(){
     var $nextBtn = $('#next-btn');
@@ -92,16 +94,40 @@ $(document).ready(function(){
   });
 
   $('[data-scene-id="samsons-lockbox-keycode"]').on('click', function(){
-    var enteredKeycode = $('#samsons-lockbox-keycode').val();
+    if (retryLockbox) {
+      enteredKeycode = $('#scene-samsons-lockbox-keycode-wrong .samsons-lockbox-keycode').val();
+    } else {
+      enteredKeycode = $('#scene-samsons-box-use-key .samsons-lockbox-keycode').val();
+    }
+
     hideEverything();
-    if (enteredKeycode.toLowerCase() === 'delilah') {
+    if (enteredKeycode && enteredKeycode.toLowerCase() === 'delilah') {
       loadContent('#scene-samsons-lockbox-keycode-right');
       $('#samsons-diary-btn').show();
     } else {
       loadContent('#scene-samsons-lockbox-keycode-wrong');
+      retryLockbox = true;
     }
   });
 
+  $('[data-scene-id="fitzgeralds-letters"]').on('click', function(){
+    $('#fitzgeralds-letters-btn').show();
+    if (hasIrishBook) {
+      $('.irish').hide();
+      $('.english').show();
+      $('#translation-remark').html('Who knew one of those books that promises to teach you a language in 30 minutes could actually work? Well, it certainly helps as a translation guide...');
+    }
+  });
+
+  $('.action-btn').on('click', function(){
+    if ($('[data-scene-id="boyds-room"]').hasClass('visited') && $('[data-scene-id="samsons-room"]').hasClass('visited') && $('[data-scene-id="fitzgeralds-room"]').hasClass('visited') && $('[data-scene-id="crosbys-room"]').hasClass('visited') && $('[data-scene-id="greenhouse"]').hasClass('visited')) {
+      $('#jaccuse-btn').show();
+    }
+  });
+
+  $('[data-scene-id="accuse-wrong"]').on('click', function(){
+    $('.sidebar-btn').hide();
+  })
 })
 
 

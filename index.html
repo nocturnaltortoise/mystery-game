@@ -9,17 +9,18 @@
   <body>
     <div class="wrapper">
       <div class="sidebar">
-        <button type="button" name="button" id="back-btn" class="hidden action-btn">Back</button>
-        <div id="scene-2-btns" class="hidden">
-          <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="initial-letter">Amelia's Letter</button>
-        </div>
         <div id="scene-rejoin-detectives-btns" class="hidden">
           <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="map">House Map</button>
         </div>
+        <div id="scene-2-btns" class="hidden">
+          <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="initial-letter">Amelia's Letter</button>
+        </div>
         <button id="samsons-diary-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="samsons-diary">Samson's Diary</button>
         <button id="irish-book-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="library-irish-book">Learn Irish in 30 Minutes!</button>
-        <button id="cipher-book-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="library-cipher-book">Monoalphabetic Ciphers and their Usage</button>
+        <button id="cipher-book-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="library-cipher-book">Monoalphabetic Ciphers And Their Usage</button>
         <button id="boyds-papers-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="boyds-papers">Boyd's Papers</button>
+        <button id="fitzgeralds-letters-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="fitzgeralds-letters">Fitzgerald's letter fragments</button>
+        <button id="jaccuse-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="jaccuse">J'accuse!</button>
       </div>
       <div class="content">
         <div id="scene-1" class="text-content">
@@ -236,7 +237,7 @@
         </div>
         <div id="scene-samsons-box-use-key" class="text-content hidden" data-custom-btns="scene-samsons-lockbox-btns">
           <p>Turning the key in the box, you find you are able to push up the front panel, but no further. This reveals several dials, each allowing you to enter a letter. It’s some kind of combination lock, but what could the key be? Could he have left it lying around, or given it to someone else?</p>
-          <input id="samsons-lockbox-keycode" type="text" name="" value="" placeholder="Enter a keycode"></input>
+          <input class="samsons-lockbox-keycode" type="text" name="samsons-lockbox-keycode" placeholder="Enter a keycode"></input>
         </div>
         <div id="scene-samsons-lockbox-keycode-right" class="text-content hidden">
           <p>You hear a click, and the small handle in the front of the box lets you pull the front out. Inside is a small notebook. It looks like a diary!</p>
@@ -250,6 +251,7 @@
         </div>
         <div id="scene-samsons-lockbox-keycode-wrong" class="text-content hidden" data-custom-btns="scene-samsons-lockbox-btns">
           <p>Entering this combination doesn’t seem to change anything. You don’t hear anything and no part of the box will budge. </p>
+          <input class="samsons-lockbox-keycode" type="text" name="samsons-lockbox-keycode" placeholder="Enter a keycode"></input>
         </div>
 
         <div id="scene-samsons-diary" class="text-content hidden">
@@ -259,6 +261,57 @@
           <p>Amelia introduced me to an army major today, Boyd is his name I think, he is also to be staying here for a while. It is very generous of Amelia to offer her home up to friends of hers like this. He is a handsome fellow, I couldn’t help but notice his very piercing eyes, but he has a sadness to him. I should like to talk to him some more. </p>
           <p>18th February 1920</p>
           <p>I have been having many conversations with Boyd, he’s quite a fascinating fellow, though he doesn’t let on much about himself. Lots of the fellows who came back from the war are like that though. Something about him makes me nervous. I had Miss Crosby sneak me a hipflask, she does not know of my condition clearly. I drank myself into a stupor that night. When I sobered in the morning I hid myself away in the greenhouse to pray, and to hide the hangover from Amelia. God is clearly trying me, he knows how the two parts of my condition are tied together. Why does he bring this Delilah into my life to try me?</p>
+        </div>
+
+        <div id="scene-fitzgeralds-room" class="text-content hidden" data-custom-btns="scene-fitzgeralds-room-btns">
+          <p>It seems somebody has already been busy in Fitzgerald’s room. Clothes and papers are scattered everywhere, the room has been upended. The fire is long out in the fireplace, but someone has been burning paper in it, and some fragments still survive. </p>
+        </div>
+
+        <div id="scene-fitzgeralds-letters" class="text-content hidden">
+          <p id="translation-remark">The fragments seem to be in Irish, if only I had some way of translating it...</p>
+          <p>First fragment: </p>
+          <blockquote class="irish">
+            <em>...is féidir linn maitheas a dhéanamh gan foréigean, is féidir linn tacú leis na ranganna oibre le maoiniú do na rudaí a bhfuil siad ag brath orthu, más féidir linn a chur ina luí ar na daoine cearta cabhrú linn go airgeadais, mar atáim ag iarraidh anseo. Ní dhéanfaidh na hionsaithe ar spriocanna Shasana ach ranganna oibre Shasana inár gcoinne</em>
+          </blockquote>
+          <blockquote class="hidden english">
+            <em>...we can do good without violence, we can support the working classes with funding for the things they rely on, if we can convince the right people to aid us financially, like I am trying to here. The attacks on English targets will just turn the English working classes against us...</em>
+          </blockquote>
+          <p>Second fragment: </p>
+          <blockquote class="irish">
+            <em>...Tá fear agam ag eireaball orm anseo, creideann sé gur cineál éigin plotaire buama buile is dóigh liom. Déanann siad go léir, a luaithe a deir tú nár mhaith leat gach Éireannach a thacaíonn leis an smaoineamh go mbeadh Éire saor marbh. Is cosúil gur fear réasúnta é, tá súil agam gur féidir liom é a chasadh leis an am...</em>
+          </blockquote>
+          <blockquote class="hidden english">
+            <em>...I have a man tailing me here, he believes me to be some kind of mad bomb plotter I suppose. They all do, once you say that you don’t wish every Irish man who supports the idea of a free Ireland dead. He seems like a reasonable man, I hope that with time perhaps I can turn him...</em>
+          </blockquote>
+        </div>
+
+        <div id="scene-crosbys-room" class="text-content hidden" data-custom-btns="scene-crosbys-room-btns">
+          <p>Crosby’s room is relatively small and spartan. She has a small window, a bed, a bedside table and a wardrobe.</p>
+        </div>
+
+        <div id="scene-crosbys-bedside-table" class="text-content hidden" data-custom-btns="scene-crosbys-room-btns">
+          <p>The bedside table has a few coins in one draw, and in the bottom of another, bunches and bunches of paper bills and betting slips. You remember what Smith and Easton had said after you left the dining room, they were talking about the will. In it, apparently, Marsh had left a sum of money to Crosby – perhaps this was why?</p>
+        </div>
+
+        <div id="scene-crosbys-wardrobe" class="text-content hidden" data-custom-btns="scene-crosbys-room-btns">
+          <p>The wardrobe has a few simple dresses in, very well worn, and another uniform.</p>
+        </div>
+
+        <div id="scene-marshs-room" class="text-content hidden" data-custom-btns="scene-crosbys-room-btns">
+          <p>Marsh’s room is completely bare. The police must have already removed all her belongings as evidence. It makes a sombre scene, seeing a room of someone you once knew empty like this.</p>
+        </div>
+
+        <div id="scene-jaccuse" class="text-content hidden" data-custom-btns="scene-jaccuse-btns">
+          <p>Leading you back into the dining room, Smith and Easton in unison gesture at the gathered house guests and say, "So then, who killed Amelia Marsh?"</p>
+        </div>
+
+        <div id="scene-accuse-wrong" class="text-content hidden">
+          <p>Your accusation leads to the arrest of an innocent.</p>
+          <h2>GAME OVER</h2>
+        </div>
+        <div id="scene-accuse-right" class="text-content hidden">
+          <p>Samson is rightfully led away in cuffs. He casts one last mournful glance over his shoulder at Boyd as he leaves the room.</p>
+          <h2>You've cracked the case.</h2>
         </div>
 
         <div class="actions-footer">
@@ -304,6 +357,7 @@
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-room">Samson's Room</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="fitzgeralds-room">Fitzgerald's Room</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="crosbys-room">Crosby's Room</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="marshs-room">Marsh's Room</button>
           </div>
           <div id="scene-library-btns" class="hidden">
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="library-categories">Search the library</button>
@@ -341,7 +395,19 @@
           <div id="scene-samsons-lockbox-btns" class="hidden">
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-lockbox-keycode">Enter the keycode</button>
           </div>
-
+          <div id="scene-fitzgeralds-room-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="fitzgeralds-letters">Extract the fragments from the fire</button>
+          </div>
+          <div id="scene-crosbys-room-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="crosbys-bedside-table">Search the bedside table</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="crosbys-wardrobe">Search the wardrobe</button>
+          </div>
+          <div id="scene-jaccuse-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="accuse-wrong">Major George Boyd</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="accuse-right">Edward Samson</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="accuse-wrong">Bridgid Fitzgerald</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="accuse-wrong">Edith Crosby</button>
+          </div>
         </div>
       </div>
     </div>

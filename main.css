@@ -55,6 +55,10 @@
 
 }
 
+.actions-footer .action-btn {
+  margin-bottom: 10px;
+}
+
 .hidden {
   display: none;
 }
