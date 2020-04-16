@@ -16,6 +16,10 @@
         <div id="scene-rejoin-detectives-btns" class="hidden">
           <button type="button" name="button" class="action-btn scene-btn sidebar-btn" data-scene-id="map">House Map</button>
         </div>
+        <button id="samsons-diary-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="samsons-diary">Samson's Diary</button>
+        <button id="irish-book-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="library-irish-book">Learn Irish in 30 Minutes!</button>
+        <button id="cipher-book-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="library-cipher-book">Monoalphabetic Ciphers and their Usage</button>
+        <button id="boyds-papers-btn" type="button" name="button" class="action-btn scene-btn sidebar-btn hidden" data-scene-id="boyds-papers">Boyd's Papers</button>
       </div>
       <div class="content">
         <div id="scene-1" class="text-content">
@@ -177,14 +181,14 @@
             <li>Deutsche Sprache, schwere Sprache: A Guide to German, by E. Ludendorff</li>
           </ul>
         </div>
-        <div id="scene-library-cipher-book" class="text-content hidden">
+        <div id="scene-library-cipher-book" class="text-content hidden" data-custom-btns="scene-instructional-specific-book-btns">
           <p>This appears to be a book on ciphers:</p>
           <blockquote>
             <em>A monoalphabetic cipher is one in which the regular alphabet is replaced with a cipherbet, that is, every letter is replaced with another letter. For instance, a Caesar shift cipher, which involves taking each letter of the plaintext and changing it for the letter n places right in the alphabet, where n is a number picked by the person using the cipher.</em>
           </blockquote>
           <p>In the margins, there are three right arrows scribbled next to each other.</p>
         </div>
-        <div id="scene-library-irish-book" class="text-content hidden">
+        <div id="scene-library-irish-book" class="text-content hidden" data-custom-btns="scene-instructional-specific-book-btns">
           <p>This appears to be a book on the Irish language for beginners.</p>
         </div>
 
@@ -219,6 +223,42 @@
         </div>
         <div id="scene-boyds-clothes" class="text-content hidden" data-custom-btns="scene-boyds-room-btns">
           <p>Amongst the clothes, you find a leather holster for a revolver.</p>
+        </div>
+
+        <div id="scene-samsons-room" class="text-content hidden" data-custom-btns="scene-samsons-room-btns">
+          <p>Samson’s room is very austere. The bed is made, he has a few books on theology and a copy of the bible on the nightstand. His desk is organised, but full of books and papers. The curtains are pulled back fully and the room seems light. He has a single, simple, wooden chair, with some clothes folded on it. There is a wardrobe against one wall, which is closed.</p>
+        </div>
+        <div id="scene-samsons-wardrobe" class="text-content hidden" data-custom-btns="scene-samsons-room-btns">
+          <p>In the bottom of the wardrobe you find a smooth wooden box, about a foot wide, 6 inches deep and a few inches thick. It has a simple lock on the outside. </p>
+        </div>
+        <div id="scene-samsons-desk" class="text-content hidden" data-custom-btns="scene-samsons-room-btns">
+          <p>In the desk you find a battered copper key. The papers on the desk are mostly theological, or concerning parish business. </p>
+        </div>
+        <div id="scene-samsons-box-use-key" class="text-content hidden" data-custom-btns="scene-samsons-lockbox-btns">
+          <p>Turning the key in the box, you find you are able to push up the front panel, but no further. This reveals several dials, each allowing you to enter a letter. It’s some kind of combination lock, but what could the key be? Could he have left it lying around, or given it to someone else?</p>
+          <input id="samsons-lockbox-keycode" type="text" name="" value="" placeholder="Enter a keycode"></input>
+        </div>
+        <div id="scene-samsons-lockbox-keycode-right" class="text-content hidden">
+          <p>You hear a click, and the small handle in the front of the box lets you pull the front out. Inside is a small notebook. It looks like a diary!</p>
+
+          <p>8th January 1920</p>
+          <p>It’s good of Amelia to let me stay while the refurbishments take place at the vicarage. She understands the nature of my condition and I think it will be good to spend time here for my health. I pray that this will be the end of my troubles. </p>
+          <p>4th February 1920</p>
+          <p>Amelia introduced me to an army major today, Boyd is his name I think, he is also to be staying here for a while. It is very generous of Amelia to offer her home up to friends of hers like this. He is a handsome fellow, I couldn’t help but notice his very piercing eyes, but he has a sadness to him. I should like to talk to him some more. </p>
+          <p>18th February 1920</p>
+          <p>I have been having many conversations with Boyd, he’s quite a fascinating fellow, though he doesn’t let on much about himself. Lots of the fellows who came back from the war are like that though. Something about him makes me nervous. I had Miss Crosby sneak me a hipflask, she does not know of my condition clearly. I drank myself into a stupor that night. When I sobered in the morning I hid myself away in the greenhouse to pray, and to hide the hangover from Amelia. God is clearly trying me, he knows how the two parts of my condition are tied together. Why does he bring this Delilah into my life to try me?</p>
+        </div>
+        <div id="scene-samsons-lockbox-keycode-wrong" class="text-content hidden" data-custom-btns="scene-samsons-lockbox-btns">
+          <p>Entering this combination doesn’t seem to change anything. You don’t hear anything and no part of the box will budge. </p>
+        </div>
+
+        <div id="scene-samsons-diary" class="text-content hidden">
+          <p>8th January 1920</p>
+          <p>It’s good of Amelia to let me stay while the refurbishments take place at the vicarage. She understands the nature of my condition and I think it will be good to spend time here for my health. I pray that this will be the end of my troubles. </p>
+          <p>4th February 1920</p>
+          <p>Amelia introduced me to an army major today, Boyd is his name I think, he is also to be staying here for a while. It is very generous of Amelia to offer her home up to friends of hers like this. He is a handsome fellow, I couldn’t help but notice his very piercing eyes, but he has a sadness to him. I should like to talk to him some more. </p>
+          <p>18th February 1920</p>
+          <p>I have been having many conversations with Boyd, he’s quite a fascinating fellow, though he doesn’t let on much about himself. Lots of the fellows who came back from the war are like that though. Something about him makes me nervous. I had Miss Crosby sneak me a hipflask, she does not know of my condition clearly. I drank myself into a stupor that night. When I sobered in the morning I hid myself away in the greenhouse to pray, and to hide the hangover from Amelia. God is clearly trying me, he knows how the two parts of my condition are tied together. Why does he bring this Delilah into my life to try me?</p>
         </div>
 
         <div class="actions-footer">
@@ -284,12 +324,24 @@
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="fiction">Fiction</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="instructional">Instructional</button>
           </div>
+          <div id="scene-instructional-specific-book-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="instructional">Back</button>
+          </div>
           <div id="scene-boyds-room-btns" class="hidden">
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-papers">Examine the papers</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-books">Examine the books</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-desk">Search the desk drawers</button>
             <button type="button" name="button" class="action-btn scene-btn" data-scene-id="boyds-clothes">Search the clothes</button>
           </div>
+          <div id="scene-samsons-room-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-wardrobe">Search the wardrobe</button>
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-desk">Search the desk</button>
+            <button type="button" name="button" class="action-btn scene-btn hidden" data-scene-id="samsons-box-use-key">Use the key on the box</button>
+          </div>
+          <div id="scene-samsons-lockbox-btns" class="hidden">
+            <button type="button" name="button" class="action-btn scene-btn" data-scene-id="samsons-lockbox-keycode">Enter the keycode</button>
+          </div>
+
         </div>
       </div>
     </div>

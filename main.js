@@ -27,8 +27,10 @@ function loadContent(id){
 
 $(document).ready(function(){
   var hasIrishBook = false;
+  var hasSamsonsKey = false;
+  var hasSamsonsLockbox = false;
 
-  $('body').on('click', '#next-btn', function(){
+  $('#next-btn').on('click', function(){
     var $nextBtn = $('#next-btn');
     var currentContentID = $nextBtn.data('sceneId');
 
@@ -40,7 +42,7 @@ $(document).ready(function(){
     $nextBtn.data('sceneId', nextContentID);
   });
 
-  $('body').on('click', '.scene-btn', function(){
+  $('.scene-btn').on('click', function(){
     hideEverything();
 
     var $that = $(this);
@@ -52,7 +54,7 @@ $(document).ready(function(){
     loadContent('#scene-' + $that.data('sceneId'));
   })
 
-  $('body').on('click', '#set-character-name-btn', function(){
+  $('#set-character-name-btn').on('click', function(){
     var characterName = $('#character-name').val();
     $('.character-name').html(characterName);
     $('#scene-1').hide();
@@ -62,9 +64,43 @@ $(document).ready(function(){
     $('#scene-2-btns').show();
   });
 
-  $('body').on('click', '.scene-btn[data-scene-id="library-irish-book"]', function(){
+  $('[data-scene-id="samsons-wardrobe"]').on('click', function(){
+    hasSamsonsLockbox = true;
+    console.log("test")
+    if (hasSamsonsKey) {
+      $('[data-scene-id="samsons-box-use-key"]').show();
+    }
+  });
+  $('[data-scene-id="samsons-desk"]').on('click', function(){
+    hasSamsonsKey = true;
+    if (hasSamsonsLockbox) {
+      $('[data-scene-id="samsons-box-use-key"]').show();
+    }
+  });
+
+  $('[data-scene-id="library-cipher-book"]').on('click', function(){
+    hasCipherBook = true;
+    $('#cipher-book-btn').show();
+  });
+  $('[data-scene-id="library-irish-book"]').on('click', function(){
     hasIrishBook = true;
-  })
+    $('#irish-book-btn').show();
+  });
+  $('[data-scene-id="boyds-papers"]').on('click', function(){
+    hasBoydsPapers = true;
+    $('#boyds-papers-btn').show();
+  });
+
+  $('[data-scene-id="samsons-lockbox-keycode"]').on('click', function(){
+    var enteredKeycode = $('#samsons-lockbox-keycode').val();
+    hideEverything();
+    if (enteredKeycode.toLowerCase() === 'delilah') {
+      loadContent('#scene-samsons-lockbox-keycode-right');
+      $('#samsons-diary-btn').show();
+    } else {
+      loadContent('#scene-samsons-lockbox-keycode-wrong');
+    }
+  });
 
 })
 
